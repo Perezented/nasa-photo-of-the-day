@@ -2,14 +2,13 @@ import React from "react";
 import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
-    </div>
-  );
+    // https://api.nasa.gov/planetary/apod?api_key=bOSofFFDfPE8KYcweoQPKvuVEpFcAxtTn2JEHqPh
+    return (
+        <div className="App">
+            <h1>This is NASA's photo of the day!</h1>
+            <p>This information is retrieved from the nasa.gov api.</p>
+        </div>
+    );
 }
 
 export default App;
