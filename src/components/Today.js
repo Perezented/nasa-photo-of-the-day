@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import TodayCard from "./TodayCard";
 
 export default function Today() {
-    const [info, updatedInfo] = useState([]);
+    const [info, updatedInfo] = useState("test");
     useEffect(() => {
         axios
             .get(
@@ -18,7 +19,8 @@ export default function Today() {
         <section>
             <h2>title</h2>
             <h5>Date</h5>
-            <p>{updatedInfo}</p>
+            <p>the actual info will go here. </p>
+            <TodayCard />
         </section>
     );
 }
