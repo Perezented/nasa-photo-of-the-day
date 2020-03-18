@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import TodayCard from "./TodayCard";
+import TodayCard from "./NasaCard";
 
-export default function Today() {
+export default function Container() {
     const [info, updatedInfo] = useState({});
     useEffect(() => {
         axios
