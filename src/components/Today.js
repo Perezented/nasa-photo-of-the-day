@@ -3,7 +3,7 @@ import axios from "axios";
 import TodayCard from "./TodayCard";
 
 export default function Today() {
-    const [info, updatedInfo] = useState("test");
+    const [info, updatedInfo] = useState({});
     useEffect(() => {
         axios
             .get(
@@ -19,8 +19,7 @@ export default function Today() {
         <section>
             <h2>title</h2>
             <h5>Date</h5>
-            <p>the actual info will go here. </p>
-            <TodayCard />
+            <TodayCard result={info} />
         </section>
     );
 }
