@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import TodayCard from "./NasaCard";
+import NasaCard from "./NasaCard";
 
 export default function Container() {
     const [info, updatedInfo] = useState({});
@@ -17,9 +17,7 @@ export default function Container() {
     }, []);
     return (
         <section>
-            <h2>title</h2>
-            <h5>Date</h5>
-            <TodayCard result={info} />
+            <NasaCard result={info} />
         </section>
     );
 }

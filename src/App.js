@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Today from "./components/NasaContainer";
+import Container from "./components/NasaContainer";
 
 function App() {
     // https://api.nasa.gov/planetary/apod?api_key=bOSofFFDfPE8KYcweoQPKvuVEpFcAxtTn2JEHqPh
