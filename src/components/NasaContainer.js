@@ -21,6 +21,15 @@ export default function Container() {
     }, [today]);
     return (
         <section>
+            <label for="date">Select the day you would like to view.</label>
+            <input
+                type="date"
+                name="date"
+                id="date"
+                max={today}
+                min="1995-06-16"
+            />
+            <button type="submit">Submit</button>
             <NasaCard result={info} />
         </section>
     );
