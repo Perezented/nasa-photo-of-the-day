@@ -7,7 +7,7 @@ export default function Container() {
     useEffect(() => {
         axios
             .get(
-                "https://api.nasa.gov/planetary/apod?api_key=bOSofFFDfPE8KYcweoQPKvuVEpFcAxtTn2JEHqPh"
+                "https://api.nasa.gov/planetary/apod?api_key=bOSofFFDfPE8KYcweoQPKvuVEpFcAxtTn2JEHqPh&date=2020-03-18"
             )
             .then(result => {
                 console.log(result.data);
