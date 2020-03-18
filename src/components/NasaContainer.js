@@ -4,17 +4,21 @@ import NasaCard from "./NasaCard";
 
 export default function Container() {
     const [info, updatedInfo] = useState({});
+    const day = new Date();
+    const today = `${day.getFullYear()}-${day.getMonth() + 1}-${day.getDate()}`;
+
+    const [setDate, updateDate] = useState(today);
     useEffect(() => {
         axios
             .get(
-                "https://api.nasa.gov/planetary/apod?api_key=bOSofFFDfPE8KYcweoQPKvuVEpFcAxtTn2JEHqPh&date=2020-03-18"
+                `https://api.nasa.gov/planetary/apod?api_key=bOSofFFDfPE8KYcweoQPKvuVEpFcAxtTn2JEHqPh&date=${setDate}`
             )
             .then(result => {
                 console.log(result.data);
                 updatedInfo(result.data);
             })
             .catch(error => console.log(error));
-    }, []);
+    }, [today]);
     return (
         <section>
             <NasaCard result={info} />

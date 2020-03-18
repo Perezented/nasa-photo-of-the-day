@@ -11,7 +11,7 @@ const NasaCard = props => {
                 alt="Nasa's selected a view for this day."
             />
             <p>{props.result.explanation}</p>
-            <h5>{props.result.copyright}</h5>
+            <h5>{props.result.copyright}©</h5>
         </div>
     );
 };
