@@ -16,9 +16,14 @@ export default function Container() {
             .then(result => {
                 console.log(result.data);
                 updatedInfo(result.data);
+                // console.log(updateDate);
+                console.log(document.querySelector("input"));
+                document
+                    .querySelector("input")
+                    .addEventListener("click", e => console.log(e));
             })
             .catch(error => console.log(error));
-    }, [today]);
+    }, [setDate]);
     return (
         <section>
             <label for="date">Select the day you would like to view.</label>
