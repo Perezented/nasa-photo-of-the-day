@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import NasaCard from "./NasaCard";
+import PickDate from "./PickDate";
 
 export default function Container() {
     const [info, updatedInfo] = useState({});
+
     const day = new Date();
     const today = `${day.getFullYear()}-${day.getMonth() + 1}-${day.getDate()}`;
-
     const [setDate, updateDate] = useState(today);
+
     useEffect(() => {
         axios
             .get(
@@ -17,25 +19,14 @@ export default function Container() {
                 console.log(result.data);
                 updatedInfo(result.data);
                 // console.log(updateDate);
-                console.log(document.querySelector("input"));
-                document
-                    .querySelector("input")
-                    .addEventListener("click", e => console.log(e));
             })
             .catch(error => console.log(error));
     }, [setDate]);
+
     return (
         <section>
-            <label for="date">Select the day you would like to view.</label>
-            <input
-                type="date"
-                name="date"
-                id="date"
-                max={today}
-                min="1995-06-16"
-            />
-            <button type="submit">Submit</button>
-            <NasaCard result={info} />
+            <PickDate today={today} />
+            <NasaCard result={info} updateDate={updateDate} today={today} />
         </section>
     );
 }
