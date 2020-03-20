@@ -3,7 +3,6 @@ import React from "react";
 import styled from "styled-components";
 
 const TitleDiv = styled.div`
-    border: 1px solid white;
     margin: 0 auto;
     width: 90%;
 `;

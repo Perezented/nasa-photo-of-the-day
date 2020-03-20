@@ -3,8 +3,10 @@ import styled from "styled-components";
 const DateForm = styled.form`
     margin-left: 5%;
 `;
-export default function PickDate(today) {
+export default function PickDate(today, updateDate) {
     console.log(today.today);
+    console.log(updateDate);
+    // useEffect(){}
     return (
         <DateForm>
             <label htmlFor="updateDate">
@@ -14,10 +16,9 @@ export default function PickDate(today) {
                     name="updateDate"
                     required
                     min="1995-06-01"
-                    // max={today.today}
-                    value="{today.today}"
+                    max={today.today}
+                    // value="{today.today}"
                 />
-                <span className="validity"></span>
             </label>
             <p>
                 <button>Submit</button>

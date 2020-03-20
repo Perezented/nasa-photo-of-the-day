@@ -7,7 +7,6 @@ const ImageDiv = styled.div`
     align-items: center;
     width: 90%;
     margin: 3% auto;
-    border: 1px solid green;
 `;
 const ImageHalf = styled.img`
     max-width: 100%;
@@ -17,7 +16,7 @@ const TextOnImage = styled.h5`
     text-align: center;
 `;
 const Explained = styled.p`
-    line-height: 120%;
+    line-height: 150%;
     font-size: 1.2rem;
 `;
 const ExplainedDiv = styled.div`

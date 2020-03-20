@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import NasaCard from "./NasaCard";
 import PickDate from "./PickDate";
+import styled from "styled-components";
+const DateForm = styled.form`
+    margin-left: 5%;
+`;
 
 export default function Container() {
     const [info, updatedInfo] = useState({});
@@ -25,8 +29,9 @@ export default function Container() {
 
     return (
         <section>
-            <PickDate today={today} />
-            <NasaCard result={info} updateDate={updateDate} today={today} />
+            {/* <PickDate today={today} updateDate={updateDate} /> */}
+
+            <NasaCard result={info} today={today} />
         </section>
     );
 }
